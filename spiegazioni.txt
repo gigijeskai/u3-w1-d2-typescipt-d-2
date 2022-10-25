@@ -1,0 +1,52 @@
+enumerazione:
+enum è un tipo do dato molto simile ad una classe, descrive una serie di constanti, solo costanti e nient'altro
+enum Mesi {
+    GENNAIO = 1,
+    FEBBRAIO,
+    MARZO,
+    APRILE
+}
+non è un array, è una struttura dati che servirà a tipizzare delle variabili
+
+let mese: Mesi;
+in questa variabile tipizzata dal tipo Mesi, potro inserire soltanto i valori dell'enum che la tipizza
+
+posso anche cambiare un indice di partenza e quel'indice affibiato lo posso richiamare es.
+let mese:Mesi;
+mese = 1 (questo '1' fa riferimento al mese con quell'indice affibiato)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+nelle classi di ts si dichiara la classe con il nome es. class Animal{}
+al suo interno verranno specificati i tipi di dati es.
+class Animal {
+    name:string
+    constructor(name:string){
+this.name = name
+    }
+}
+da questa classe posso creare degli oggetti con la keyword new, gli oggetti creati dal costruttore sono dette instanze dell'oggetto es.
+let animale1 = new Animal('cane') -nelle parentesi ci mettiamo il parametro del costruttore che sarebbe name:string
+let animale1 = new Animal('topo') -nelle parentesi ci mettiamo il parametro del costruttore che sarebbe name:string
+let animale1 = new Animal('scimmia') -nelle parentesi ci mettiamo il parametro del costruttore che sarebbe name:string
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+tra i metodi dell'array più versatili c'è siuramente splice che permette di eliminare 1 o più elementi selezionando un solo parametro di un array dalla posizione 
+in cui voglio e permette di aggiungere nuovi in sostituzioni di quelli eleminati e se seleziono di eliminare 0 elementi e nel parametro gli dico di aggiungere 
+aggiungerà e basta
+
+il metodo dell'array map prende un array e per ogni elemento fa qualcosa creando un altro array con gli elementi modificati e come parametro questo metodo prende
+una callback che sarebbe una variabile come parametro
+ il metodo foreach itera un array e prende anchesso una callback come parametro
+ il metodo filter prende anchesso una callback come parametro ed ha la funzionalita di prendere un array e di filtrarlo in base a una condizione come ad esempio
+ la lunghezza di un elemento e restituisce un nuovo array
+
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ le funzioni al caricamento dello script legge prima tutte le funzioni e lo scope delle funzioni sarà globale.
+ se metto una funzione in una variabile si chiama funzione espressione solo che non salirà in cima allo script come le normali funzioni e quindi la funzione 
+ sarà una funzione solo dopo la dichiarazione della variabile che la contiene
+
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ il '?' in ts serve a definire un valore opzionale, lo utilizzo nei momenti in cui creo qualcosa che potrebbe servirmi in futuro e quindi lo rendo opzionale
